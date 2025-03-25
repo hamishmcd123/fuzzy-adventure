@@ -15,7 +15,11 @@ void GameManager::DrawPoints() {
 }
  void GameManager::MovePoint() { 
 	 for (int i = 0; i < pvec.size(); i++) {
-		 if (CheckCollisionCircles(GetMousePosition(), 20, pvec[i].pos, 20)) {
+		 if (CheckCollisionCircles(GetMousePosition(), 20, pvec[i].pos, 15)) {
+			 pvec[i].pos = GetMousePosition();
+			 pvec[i].held = true;
+		 }
+		 if (pvec[i].held == true) {
 			 pvec[i].pos = GetMousePosition();
 		 }
 	}

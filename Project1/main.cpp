@@ -21,6 +21,11 @@ int main() {
 		if (IsKeyPressed(KEY_C)) {
 			gameManager.DeleteAllPoints();
 		}
+		if (IsMouseButtonReleased(MOUSE_BUTTON_LEFT)) {
+			for (int i = 0; i < gameManager.pvec.size(); i++) {
+				gameManager.pvec[i].held = false;
+			}
+		}
 		gameManager.DrawLerp();
 		gameManager.DrawLines();
 		gameManager.DrawPoints();

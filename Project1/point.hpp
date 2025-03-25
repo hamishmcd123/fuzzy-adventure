@@ -7,6 +7,7 @@ public:
 	Vector2 pos;
 	Point(Vector2 pos);
 	~Point(); 
+	bool held;
 private:
 
 };

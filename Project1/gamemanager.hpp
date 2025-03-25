@@ -7,7 +7,7 @@ namespace Core {
 class GameManager {
 public:
 	std::vector<Objects::Point> pvec; 
-	enum gameStates {
+	enum class gameStates {
 		NORMAL,
 		EDIT
 	};

@@ -2,7 +2,9 @@
 
 using namespace Objects;
 
-Point::Point(Vector2 pos) : pos(pos) {}
+Point::Point(Vector2 pos) : pos(pos) {
+	held = false;
+}
 
 Point::~Point() {
 }
